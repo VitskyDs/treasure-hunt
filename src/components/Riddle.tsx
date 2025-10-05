@@ -13,9 +13,13 @@ const Riddle = ({ children }: RiddleProps) => {
         With the help of the clue and your extra-sensual powers, solve the
         riddle.
       </p>
-
-      <p>Your clue is this:</p>
-      <ClueBox>{children}</ClueBox>
+      <br />
+      <ClueBox>
+        <div>
+          <h3>Riddle</h3>
+        </div>
+        {children}
+      </ClueBox>
     </div>
   );
 };

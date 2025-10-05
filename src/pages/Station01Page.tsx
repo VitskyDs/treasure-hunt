@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import Instructions from "../components/Instructions";
 import Hint from "../components/Hint";
 import Riddle from "../components/Riddle";
+import Main from "../components/Main";
 
 export default function StationPage01() {
   const [solved, setSolved] = useState(false);
@@ -14,7 +15,7 @@ export default function StationPage01() {
   };
 
   return (
-    <main>
+    <Main>
       <h1>Hilton Park</h1>
       <p>The sea remembers.</p>
       <p>
@@ -48,10 +49,13 @@ export default function StationPage01() {
         <>
           <h2>Your solution</h2>
           <Input onSubmit={handleSubmit} />
-          <Hint>
-            Some things are tasty at this place, but no longer available there.
-          </Hint>
-          <Hint>D _ _ _ _ &nbsp; C _ _ _</Hint>
+          <div className="flex-column">
+            <Hint>
+              Some things are tasty at this place, but no longer available
+              there.
+            </Hint>
+            <Hint>D _ _ _ _ &nbsp; C _ _ _</Hint>
+          </div>
         </>
       ) : (
         <Instructions>
@@ -69,6 +73,6 @@ export default function StationPage01() {
           </>
         </Instructions>
       )}
-    </main>
+    </Main>
   );
 }

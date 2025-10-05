@@ -4,6 +4,7 @@ import Input from "../components/Input";
 import Instructions from "../components/Instructions";
 import Hint from "../components/Hint";
 import Riddle from "../components/Riddle";
+import Main from "../components/Main";
 
 export default function StationPage02() {
   const [solved, setSolved] = useState(false);
@@ -15,7 +16,7 @@ export default function StationPage02() {
   };
 
   return (
-    <main>
+    <Main>
       <h1>Cafe Daisy</h1>
       <p>Here the city speaks in names.</p>
       <p>
@@ -62,9 +63,11 @@ export default function StationPage02() {
       {!solved ? (
         <>
           <Input onSubmit={handleSubmit} />
-          <Hint>A circle of life, with water at its heart.</Hint>
-          <Hint>Where people enjoy themselves, all days of the week.</Hint>
-          <Hint>D _ _ _ _ _ _ _ _ S _ _ _ _ _</Hint>
+          <div className="flex-column">
+            <Hint>A circle of life, with water at its heart.</Hint>
+            <Hint>Where people enjoy themselves, all days of the week.</Hint>
+            <Hint>D _ _ _ _ _ _ _ _ S _ _ _ _ _</Hint>
+          </div>
         </>
       ) : (
         <Instructions>
@@ -81,6 +84,6 @@ export default function StationPage02() {
           </>
         </Instructions>
       )}
-    </main>
+    </Main>
   );
 }

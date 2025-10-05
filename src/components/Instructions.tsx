@@ -1,15 +1,25 @@
 import React from "react";
+import styled from "styled-components";
 
 type InstructionsProps = {
   children: React.ReactNode;
 };
 
+const Container = styled.div`
+  padding: 16px;
+  background-color: #121212;
+  border: 1px solid #321098;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(60, 2, 83, 0.8);
+  text-align: center;
+`;
+
 const Instructions: React.FC<InstructionsProps> = ({ children }) => {
   return (
-    <div style={{ margin: "16px", padding: "16px" }}>
+    <Container>
       <h2>Well done, witch</h2>
       {children}
-    </div>
+    </Container>
   );
 };
 
