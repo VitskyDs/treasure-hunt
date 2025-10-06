@@ -7,6 +7,7 @@ import Riddle from "../components/Riddle";
 import Main from "../components/Main";
 import GemDivider from "../components/GemDivider";
 import DropCap from "../components/DropCap";
+import Heading from "../components/Heading";
 
 export default function StationPage02() {
   const [solved, setSolved] = useState(false);
@@ -20,7 +21,8 @@ export default function StationPage02() {
   return (
     <Main>
       <div>
-        <h1>Cafe Daisy</h1>
+        <Heading>Cafe Daisy</Heading>
+
         <p style={{ display: "flex", alignItems: "baseline" }}>
           <DropCap letter="H" />
           ere the city speaks in names.

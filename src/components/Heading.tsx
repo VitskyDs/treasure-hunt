@@ -7,7 +7,7 @@ const Frame = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 16px 32px;
+  padding: 16px 40px;
   text-align: center;
   height: 264px;
   display: flex;
@@ -23,7 +23,7 @@ interface HeadingProps {
 function Heading({ children }: HeadingProps) {
   return (
     <Frame>
-      <h1>{children}</h1>
+      <h1 style={{ margin: 0 }}>{children}</h1>
     </Frame>
   );
 }

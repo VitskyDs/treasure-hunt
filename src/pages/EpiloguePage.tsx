@@ -2,13 +2,17 @@
 
 import DropCap from "../components/DropCap";
 import GemDivider from "../components/GemDivider";
+import Heading from "../components/Heading";
 import Main from "../components/Main";
+
+import heartGem from "../assets/heart-gem.png";
 
 export default function EpiloguePage() {
   return (
     <Main>
       <div>
-        <h1>Epilogue</h1>
+        <Heading>Epilogue</Heading>
+
         <p style={{ display: "flex", alignItems: "baseline" }}>
           <DropCap letter="W" />
           itch, the hunt is complete.
@@ -45,6 +49,15 @@ export default function EpiloguePage() {
         <p>Go now to **[location]**, where love is waiting.</p>
         <p>Tonight is for us, a night to remember.</p>
       </div>
+      <img
+        src={heartGem}
+        alt="Heart Gem"
+        style={{
+          display: "block",
+          margin: "2rem auto",
+          width: "80px",
+        }}
+      />
     </Main>
   );
 }

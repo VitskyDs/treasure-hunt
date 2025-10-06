@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Main from "../components/Main";
 import DropCap from "../components/DropCap";
 import GemDivider from "../components/GemDivider";
+import Heading from "../components/Heading";
 
 export default function StationPage05() {
   const navigate = useNavigate();
@@ -9,7 +10,8 @@ export default function StationPage05() {
   return (
     <Main>
       <div>
-        <h1>Trumpeldor Cemetery</h1>
+        <Heading>Trumpeldor Cemetery</Heading>
+
         <p style={{ display: "flex", alignItems: "baseline" }}>
           <DropCap letter="T" />
           he city’s heart beats loudly in its streets, but here, Witch, it falls

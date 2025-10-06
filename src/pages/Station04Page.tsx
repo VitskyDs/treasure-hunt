@@ -7,6 +7,7 @@ import Riddle from "../components/Riddle";
 import Main from "../components/Main";
 import DropCap from "../components/DropCap";
 import GemDivider from "../components/GemDivider";
+import Heading from "../components/Heading";
 
 export default function StationPage04() {
   const [solved, setSolved] = useState(false);
@@ -19,7 +20,8 @@ export default function StationPage04() {
 
   return (
     <Main>
-      <h1>Habima Square</h1>
+      <Heading>Habima Square</Heading>
+
       <div>
         <p style={{ display: "flex", alignItems: "baseline" }}>
           <DropCap letter="T" />

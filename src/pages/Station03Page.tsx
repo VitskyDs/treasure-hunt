@@ -7,6 +7,7 @@ import Riddle from "../components/Riddle";
 import Main from "../components/Main";
 import GemDivider from "../components/GemDivider";
 import DropCap from "../components/DropCap";
+import Heading from "../components/Heading";
 
 export default function StationPage03() {
   const [solved, setSolved] = useState(false);
@@ -20,7 +21,7 @@ export default function StationPage03() {
   return (
     <Main>
       <div>
-        <h1>Dizengoff Square</h1>
+        <Heading>Dizengoff Square</Heading>
         <p style={{ display: "flex", alignItems: "baseline" }}>
           <DropCap letter="T" />
           he fountain turns endlessly, its waters catching fire and light in a

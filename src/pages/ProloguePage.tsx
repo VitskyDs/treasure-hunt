@@ -57,7 +57,7 @@ export default function ProloguePage() {
       <GemDivider color="green" />
 
       {!solved ? (
-        <div style={{ width: "100%" }}>
+        <>
           <h2>Your solution</h2>
           <Input onSubmit={handleSubmit} />
           {error && (
@@ -69,7 +69,7 @@ export default function ProloguePage() {
             <Hint>Where we had our fatefull picnic, all that time ago.</Hint>
             <Hint>H _ _ _ _ _ &nbsp; P _ _ _</Hint>
           </div>
-        </div>
+        </>
       ) : (
         <Instructions>
           <>
