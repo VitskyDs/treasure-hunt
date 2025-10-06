@@ -5,6 +5,8 @@ import Instructions from "../components/Instructions";
 import Hint from "../components/Hint";
 import Riddle from "../components/Riddle";
 import Main from "../components/Main";
+import GemDivider from "../components/GemDivider";
+import DropCap from "../components/DropCap";
 
 export default function StationPage02() {
   const [solved, setSolved] = useState(false);
@@ -17,30 +19,36 @@ export default function StationPage02() {
 
   return (
     <Main>
-      <h1>Cafe Daisy</h1>
-      <p>Here the city speaks in names.</p>
-      <p>
-        Ibn Gabirol was a poet, a seeker of truth, who lived a thousand years
-        before these streets were laid. He wrote of wisdom, of life’s fleeting
-        nature, and of justice that outlives the body.
-      </p>
-      <q>
-        Who shall utter Thy mighty deeds, For Thou madest a division of the ball
-        of the earth into twain, half dry land, half water, And didst surround
-        the water with the sphere of air…
-      </q>
-      <p>
-        On this very shoreline, two men appeared. A brief exchange, a flash, a
-        shot — and Arlosoroff fell. His wife cried for help, but the killers
-        melted into darkness.
-      </p>
-      <p>
-        Arlosoroff, too, dealt in words — speeches, letters, visions for a
-        people in peril. Words that stirred passion and anger alike. Here, at
-        this crossing of names, poetry meets politics, and memory lingers like
-        an echo.
-      </p>
+      <div>
+        <h1>Cafe Daisy</h1>
+        <p style={{ display: "flex", alignItems: "baseline" }}>
+          <DropCap letter="H" />
+          ere the city speaks in names.
+        </p>
 
+        <p>
+          Ibn Gabirol was a poet, a seeker of truth, who lived a thousand years
+          before these streets were laid. He wrote of wisdom, of life’s fleeting
+          nature, and of justice that outlives the body.
+        </p>
+        <q>
+          Who shall utter Thy mighty deeds, For Thou madest a division of the
+          ball of the earth into twain, half dry land, half water, And didst
+          surround the water with the sphere of air…
+        </q>
+        <p>
+          On this very shoreline, two men appeared. A brief exchange, a flash, a
+          shot — and Arlosoroff fell. His wife cried for help, but the killers
+          melted into darkness.
+        </p>
+        <p>
+          Arlosoroff, too, dealt in words — speeches, letters, visions for a
+          people in peril. Words that stirred passion and anger alike. Here, at
+          this crossing of names, poetry meets politics, and memory lingers like
+          an echo.
+        </p>
+      </div>
+      <GemDivider />
       <Riddle>
         <>
           <p>
@@ -58,6 +66,8 @@ export default function StationPage02() {
         </>
       </Riddle>
 
+      <GemDivider color="green" />
+
       <h2>Your solution</h2>
 
       {!solved ? (
@@ -66,7 +76,7 @@ export default function StationPage02() {
           <div className="flex-column">
             <Hint>A circle of life, with water at its heart.</Hint>
             <Hint>Where people enjoy themselves, all days of the week.</Hint>
-            <Hint>D _ _ _ _ _ _ _ _ S _ _ _ _ _</Hint>
+            <Hint>D _ _ _ _ _ _ f f &nbsp; S _ _ _ _ _</Hint>
           </div>
         </>
       ) : (

@@ -6,6 +6,7 @@ import Riddle from "../components/Riddle";
 import Main from "../components/Main";
 import GemDivider from "../components/GemDivider";
 import DropCap from "../components/DropCap";
+import Heading from "../components/Heading";
 
 export default function ProloguePage() {
   const [solved, setSolved] = useState(false);
@@ -23,13 +24,12 @@ export default function ProloguePage() {
   return (
     <Main>
       <div>
-        <h1>Prologue</h1>
-
+        <Heading>Prologue</Heading>
         <p>
-          <div style={{ display: "flex", alignItems: "baseline" }}>
+          <p style={{ display: "flex", alignItems: "baseline" }}>
             <DropCap letter="H" />
             oa hoa hoa.
-          </div>
+          </p>
         </p>
         <p>
           You are no ordinary wanderer. You are a witch, gifted with the power

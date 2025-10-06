@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const ClueBox = styled.div`
-  background: #0f0239; /* parchment color */
-  border: 3px solid #1f0765; /* dark brown border */
+  background: #0f0239;
+  border: 3px solid #1f0765;
   border-radius: 6px;
   padding: 1.5rem 2rem;
   margin: 0;

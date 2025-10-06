@@ -4,6 +4,9 @@ import Input from "../components/Input";
 import Instructions from "../components/Instructions";
 import Hint from "../components/Hint";
 import Riddle from "../components/Riddle";
+import Main from "../components/Main";
+import GemDivider from "../components/GemDivider";
+import DropCap from "../components/DropCap";
 
 export default function StationPage03() {
   const [solved, setSolved] = useState(false);
@@ -15,24 +18,31 @@ export default function StationPage03() {
   };
 
   return (
-    <main>
-      <h1>Dizengoff Square</h1>
-      <p>
-        The fountain turns endlessly, its waters catching fire and light in a
-        dance for the city. Here, in the heart of Tel Aviv, memory flows like
-        the streams — always moving, always returning.
-      </p>
-      <p>
-        The murder of Arlosoroff also moved in circles: accusations spun between
-        parties, rumors splashed through newspapers, and truth was lost in the
-        spray. Like the fountain, the case dazzled the public but never settled.
-      </p>
+    <Main>
+      <div>
+        <h1>Dizengoff Square</h1>
+        <p style={{ display: "flex", alignItems: "baseline" }}>
+          <DropCap letter="T" />
+          he fountain turns endlessly, its waters catching fire and light in a
+          dance for the city.
+        </p>
+        <p>
+          Here, in the heart of Tel Aviv, memory flows like the streams — always
+          moving, always returning.
+        </p>
+        <p>
+          The murder of Arlosoroff also moved in circles: accusations spun
+          between parties, rumors splashed through newspapers, and truth was
+          lost in the spray. Like the fountain, the case dazzled the public but
+          never settled.
+        </p>
 
-      <p>
-        Here, Witch, you see the city’s reflection: bright, restless, and full
-        of secrets.
-      </p>
-
+        <p>
+          Here, Witch, you see the city’s reflection: bright, restless, and full
+          of secrets.
+        </p>
+      </div>
+      <GemDivider />
       <Riddle>
         <p>
           Where water and fire play for the crowd, the story turns to
@@ -40,16 +50,19 @@ export default function StationPage03() {
           spoken as drama.
         </p>
       </Riddle>
-
+      <GemDivider color="green" />
       <h2>Your solution</h2>
 
       {!solved ? (
         <>
           <Input onSubmit={handleSubmit} />
-          <Hint>
-            The city’s great stage, where stories are acted and remembered.
-          </Hint>
-          <Hint>H _ _ _ _ _ S _ _ _ _ _</Hint>
+          <div className="flex-column">
+            <Hint>
+              The city’s great stage, where stories are acted and remembered.
+            </Hint>
+            <Hint>Where you can always get a nice croissant.</Hint>
+            <Hint>H _ _ _ _ _ &nbsp; S _ _ _ _ _</Hint>
+          </div>
         </>
       ) : (
         <Instructions>
@@ -66,6 +79,6 @@ export default function StationPage03() {
           </div>
         </Instructions>
       )}
-    </main>
+    </Main>
   );
 }

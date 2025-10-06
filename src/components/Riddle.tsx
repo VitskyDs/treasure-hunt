@@ -15,9 +15,8 @@ const Riddle = ({ children }: RiddleProps) => {
       </p>
       <br />
       <ClueBox>
-        <div>
-          <h3>Riddle</h3>
-        </div>
+        <h3>Riddle</h3>
+
         {children}
       </ClueBox>
     </div>

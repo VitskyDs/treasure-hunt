@@ -4,6 +4,9 @@ import Input from "../components/Input";
 import Instructions from "../components/Instructions";
 import Hint from "../components/Hint";
 import Riddle from "../components/Riddle";
+import Main from "../components/Main";
+import DropCap from "../components/DropCap";
+import GemDivider from "../components/GemDivider";
 
 export default function StationPage04() {
   const [solved, setSolved] = useState(false);
@@ -15,39 +18,46 @@ export default function StationPage04() {
   };
 
   return (
-    <main>
+    <Main>
       <h1>Habima Square</h1>
-      <p>The city turned tragedy into theater.</p>
-      <p>
-        Here, at Habima, actors embody memory on stage. But after the murder,
-        real lives became roles in a national drama. Political rivals hurled
-        accusations, suspects were dragged into show trials, and the press fed
-        the public a story of shadows, guilt, and suspicion.
-      </p>
-      <p>
-        It was no longer only history. It was performance. And the city watched.
-      </p>
+      <div>
+        <p style={{ display: "flex", alignItems: "baseline" }}>
+          <DropCap letter="T" />
+          he city turned tragedy into theater.
+        </p>
 
-      <h2>Extra-sensual riddle</h2>
-      <p>
-        With the help of the clue and your extra-sensual powers, solve the
-        riddle.
-      </p>
-      <hr />
-      <p>Your first clue is this:</p>
+        <p>
+          Here, at Habima, actors embody memory on stage. But after the murder,
+          real lives became roles in a national drama. Political rivals hurled
+          accusations, suspects were dragged into show trials, and the press fed
+          the public a story of shadows, guilt, and suspicion.
+        </p>
+        <p>
+          It was no longer only history. It was performance. And the city
+          watched.
+        </p>
+      </div>
+
+      <GemDivider />
+
       <Riddle>
         But beyond the stage, memory is not acted — it is carved in stone. Seek
         the place where silence keeps the names, where Tel Aviv’s founders and
         dreamers rest. There you will find the truth.
       </Riddle>
 
+      <GemDivider color="green" />
+
       <h2>Your solution</h2>
 
       {!solved ? (
         <>
           <Input onSubmit={handleSubmit} />
-          <Hint>Here lies Arlosoroff, among the city’s first builders.</Hint>
-          <Hint>T _ _ _ _ _ _ _ _ _ C _ _ _ _ _ _ _</Hint>
+          <div className="flex-column">
+            <Hint>Here lies Arlosoroff, among the city’s first builders.</Hint>
+            <Hint>A nearby place of eternal rest 🪦</Hint>
+            <Hint>T r _ _ _ _ _ _ _ r &nbsp; C _ _ _ _ _ r _</Hint>
+          </div>
         </>
       ) : (
         <Instructions>
@@ -65,6 +75,6 @@ export default function StationPage04() {
           </div>
         </Instructions>
       )}
-    </main>
+    </Main>
   );
 }

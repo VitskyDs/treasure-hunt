@@ -10,7 +10,6 @@ const Container = styled.div`
   display: flex;
   gap: 8px;
   background-color: #121212;
-  padding: 12px;
   border-radius: 8px;
   align-items: center;
 `;
@@ -19,7 +18,7 @@ const StyledInput = styled.input`
   flex: 1;
   background-color: #1e1e1e;
   color: #e0e0e0;
-  border: 1px solid #333;
+  border: 1px solid #1e1e1e;
   border-radius: 6px;
   padding: 12px 12px;
   font-size: 1rem;
@@ -48,7 +47,7 @@ const Input: React.FC<InputProps> = ({ onSubmit, placeholder }) => {
         type="text"
         value={value}
         onChange={handleChange}
-        placeholder={placeholder}
+        placeholder={placeholder || "Your answer here ... "}
       />
       <button onClick={handleSubmit}>Submit</button>
     </Container>

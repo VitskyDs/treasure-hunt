@@ -4,6 +4,9 @@ import Instructions from "../components/Instructions";
 import Hint from "../components/Hint";
 import Riddle from "../components/Riddle";
 import Main from "../components/Main";
+import GemDivider from "../components/GemDivider";
+import DropCap from "../components/DropCap";
+import Heading from "../components/Heading";
 
 export default function StationPage01() {
   const [solved, setSolved] = useState(false);
@@ -16,34 +19,45 @@ export default function StationPage01() {
 
   return (
     <Main>
-      <h1>Hilton Park</h1>
-      <p>The sea remembers.</p>
-      <p>
-        Here, where you once spoke words of love, another couple once walked in
-        the night. It was June 16, 1933. Dr. Haim Arlosoroff, a leader of the
-        Yishuv (the settlement in Israel before there was a state), strolled
-        along the beach with his wife, Sima.
-      </p>
-      <p>
-        He had just returned from Europe, where he sought ways to save Jewish
-        lives from the gathering storm. His work stirred enemies, and shadows
-        followed him.
-      </p>
-      <p>
-        On this very shoreline, two men appeared. A brief exchange, a flash, a
-        shot — and Arlosoroff fell. His wife cried for help, but the killers
-        melted into darkness.
-      </p>
-      <p>
-        To this day, no one knows for certain who pulled the trigger, or why.
-      </p>
-      <p>This is the mystery you must unravel.</p>
+      <div>
+        <Heading>Hilton Park</Heading>
+
+        <p style={{ display: "flex", alignItems: "baseline" }}>
+          <DropCap letter="T" />
+          he sea remembers.
+        </p>
+
+        <p>
+          Here, where you once spoke words of love, another couple once walked
+          in the night. It was June 16, 1933. Dr. Haim Arlosoroff, a leader of
+          the Yishuv (the settlement in Israel before there was a state),
+          strolled along the beach with his wife, Sima.
+        </p>
+        <p>
+          He had just returned from Europe, where he sought ways to save Jewish
+          lives from the gathering storm. His work stirred enemies, and shadows
+          followed him.
+        </p>
+        <p>
+          On this very shoreline, two men appeared. A brief exchange, a flash, a
+          shot — and Arlosoroff fell. His wife cried for help, but the killers
+          melted into darkness.
+        </p>
+        <p>
+          To this day, no one knows for certain who pulled the trigger, or why.
+        </p>
+        <p>This is the mystery you must unravel.</p>
+      </div>
+
+      <GemDivider />
 
       <Riddle>
         The waves remember, but the light of knowledge is not kept by the sea.
         Seek instead the fire of study, written into the city’s heart — where
         words and flavors once met.
       </Riddle>
+
+      <GemDivider color="green" />
 
       {!solved ? (
         <>

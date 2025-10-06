@@ -30,10 +30,21 @@ const GlobalStyles = createGlobalStyle`
 
     h3 {
   font-family: "Metamorphous", cursive;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 125%;
-  margin: 4px 0;
+  margin: 0 0 12px 0;
   text-align: center;
+  letter-spacing: 0.5px;
+  
+  }
+
+  h4 {
+  font-family: "Metamorphous", cursive;
+  font-size: 1rem;
+  line-height: 125%;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+    
   }
 
   p {

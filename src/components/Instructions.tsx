@@ -6,7 +6,7 @@ type InstructionsProps = {
 };
 
 const Container = styled.div`
-  padding: 16px;
+  padding: 24px;
   background-color: #121212;
   border: 1px solid #321098;
   border-radius: 6px;
@@ -17,7 +17,8 @@ const Container = styled.div`
 const Instructions: React.FC<InstructionsProps> = ({ children }) => {
   return (
     <Container>
-      <h2>Well done, witch</h2>
+      <h3>Well done, witch</h3>
+      <br />
       {children}
     </Container>
   );
