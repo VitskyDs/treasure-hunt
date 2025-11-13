@@ -1,22 +1,11 @@
-import { useState } from "react";
-
-import Input from "../components/Input";
-import Instructions from "../components/Instructions";
-import Hint from "../components/Hint";
-import Riddle from "../components/Riddle";
 import Main from "../components/Main";
 import DropCap from "../components/DropCap";
 import GemDivider from "../components/GemDivider";
 import Heading from "../components/Heading";
+import { useNavigate } from "react-router-dom";
 
 export default function StationPage04() {
-  const [solved, setSolved] = useState(false);
-
-  const handleSubmit = (value: string) => {
-    if (value.trim().toLowerCase() === "trumpeldor cemetery") {
-      setSolved(true);
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <Main>
@@ -38,45 +27,30 @@ export default function StationPage04() {
           It was no longer only history. It was performance. And the city
           watched.
         </p>
+        <p>
+          On June 18, 1933, tens of thousands walked these paths for his
+          funeral. Some came to mourn, some to accuse, some to protect their
+          names and causes. His death did not only break a family; it divided a
+          nation. The mystery of who killed him — political enemies, personal
+          rivals, or agents of darker powers — was never truly solved.
+        </p>
       </div>
 
       <GemDivider />
 
-      <Riddle>
-        But beyond the stage, memory is not acted — it is carved in stone. Seek
-        the place where silence keeps the names, where Tel Aviv’s founders and
-        dreamers rest. There you will find the truth.
-      </Riddle>
+      <p>
+        The truth you carry now, Witch, is that history is not only what
+        happened, but how it is remembered. The city remembers him in its
+        streets, its stories, and its silences. And you, too, have walked the
+        path of memory to its end.
+      </p>
+      <p>
+        The rune you have uncovered here does not point to another place. It
+        points inward — to hold this story, to share it, and to never let memory
+        fade into dust.
+      </p>
 
-      <GemDivider color="green" />
-
-      <h2>Your solution</h2>
-
-      {!solved ? (
-        <>
-          <Input onSubmit={handleSubmit} />
-          <div className="flex-column">
-            <Hint>Here lies Arlosoroff, among the city’s first builders.</Hint>
-            <Hint>A nearby place of eternal rest 🪦</Hint>
-            <Hint>T r _ _ _ _ _ _ _ r &nbsp; C _ _ _ _ _ r _</Hint>
-          </div>
-        </>
-      ) : (
-        <Instructions>
-          <div>
-            <p>
-              he stage has ended, Witch, but the story is not over. The murder
-              of Arlosoroff was not only a drama for the living — it became part
-              of the nation’s memory. His life and death are now etched in
-              stone, where leaders, poets, and visionaries rest side by side. To
-              truly uncover the truth, you must go where silence reigns, and
-              where the city carved his name into eternity. There lies the final
-              piece
-            </p>
-            <p>Go to Trumpeldor Cemetery, there, the last rune awaits.</p>
-          </div>
-        </Instructions>
-      )}
+      <button onClick={() => navigate("/epilogue")}>Continue</button>
     </Main>
   );
 }

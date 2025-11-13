@@ -8,6 +8,7 @@ import Main from "../components/Main";
 import GemDivider from "../components/GemDivider";
 import DropCap from "../components/DropCap";
 import Heading from "../components/Heading";
+import arlosoroff from "../assets/Ibn-Gabirol.png";
 
 export default function StationPage02() {
   const [solved, setSolved] = useState(false);
@@ -27,22 +28,25 @@ export default function StationPage02() {
           <DropCap letter="H" />
           ere the city speaks in names.
         </p>
-
         <p>
           Ibn Gabirol was a poet, a seeker of truth, who lived a thousand years
           before these streets were laid. He wrote of wisdom, of life’s fleeting
           nature, and of justice that outlives the body.
         </p>
-        <q>
+        <img
+          style={{ margin: "24px 0" }}
+          width="100%"
+          src={arlosoroff}
+          alt=""
+        />
+        <q style={{ margin: "24px 0", fontSize: "18px", lineHeight: "28px" }}>
           Who shall utter Thy mighty deeds, For Thou madest a division of the
           ball of the earth into twain, half dry land, half water, And didst
           surround the water with the sphere of air…
         </q>
-        <p>
-          On this very shoreline, two men appeared. A brief exchange, a flash, a
-          shot — and Arlosoroff fell. His wife cried for help, but the killers
-          melted into darkness.
-        </p>
+        <br />
+        <br />
+
         <p>
           Arlosoroff, too, dealt in words — speeches, letters, visions for a
           people in peril. Words that stirred passion and anger alike. Here, at
@@ -77,7 +81,10 @@ export default function StationPage02() {
           <Input onSubmit={handleSubmit} />
           <div className="flex-column">
             <Hint>A circle of life, with water at its heart.</Hint>
-            <Hint>Where people enjoy themselves, all days of the week.</Hint>
+            <Hint>
+              Where people enjoy themselves, all days of the week. Sitting in a
+              big circle, sipping and smoking.
+            </Hint>
             <Hint>D _ _ _ _ _ _ f f &nbsp; S _ _ _ _ _</Hint>
           </div>
         </>

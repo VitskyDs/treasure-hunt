@@ -7,6 +7,7 @@ import Main from "../components/Main";
 import GemDivider from "../components/GemDivider";
 import DropCap from "../components/DropCap";
 import Heading from "../components/Heading";
+import arlosoroff from "../assets/Arlosoroff.png";
 
 export default function StationPage01() {
   const [solved, setSolved] = useState(false);
@@ -43,6 +44,12 @@ export default function StationPage01() {
           shot — and Arlosoroff fell. His wife cried for help, but the killers
           melted into darkness.
         </p>
+        <img
+          style={{ margin: "24px 0" }}
+          width="100%"
+          src={arlosoroff}
+          alt=""
+        />
         <p>
           To this day, no one knows for certain who pulled the trigger, or why.
         </p>

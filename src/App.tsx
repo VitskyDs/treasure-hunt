@@ -13,7 +13,7 @@ function App() {
     <>
       <GlobalStyles />
       <Router>
-        <nav
+        {/* <nav
           style={{
             padding: "1em",
             borderBottom: "1px solid #ccc",
@@ -51,7 +51,7 @@ function App() {
               <Link to="/epilogue">Epilogue</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
         <Routes>
           <Route path="/" element={<ProloguePage />} />
           <Route path="/hilton-park" element={<Station01Page />} />
